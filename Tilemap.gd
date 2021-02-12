@@ -5,8 +5,7 @@ onready var hbox = get_node("../../../hBoxContainer")
 var is_pressed : int = 1
 
 
-func Paint(selected_toolc, state):
-	state.selected_tool == 1
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion or event is InputEventMouseButton:

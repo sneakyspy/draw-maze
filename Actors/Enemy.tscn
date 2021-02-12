@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="AnimatedTexture" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 43.8575, 17.9312 )
+
+[node name="Enemy" type="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.94902, 0.101961, 0.101961, 1 )
+self_modulate = Color( 0.972549, 0.184314, 0.184314, 1 )
+position = Vector2( 2.09245, -44.6057 )
+scale = Vector2( 86.581, 80.6102 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -23.2686 )
+shape = SubResource( 2 )

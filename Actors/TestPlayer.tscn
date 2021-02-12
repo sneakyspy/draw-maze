@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Lanturn.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Actors/Flame Pivot.gd" type="Script" id=3]
+[ext_resource path="res://Actors/Lanturn.gd" type="Script" id=4]
+
+[sub_resource type="AnimatedTexture" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 26.9995, 14.907 )
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 0
+script = ExtResource( 2 )
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 0.135788, 3.20837 )
+scale = Vector2( 55.4849, 57.2811 )
+texture = SubResource( 1 )
+
+[node name="Colision" type="CollisionShape2D" parent="."]
+position = Vector2( -3.05176e-05, 16.7646 )
+shape = SubResource( 2 )
+
+[node name="Camera and utility" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Camera and utility"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+process_mode = 0
+limit_left = 0
+limit_top = 0
+limit_right = 2565
+limit_bottom = 3005
+limit_smoothed = true
+smoothing_enabled = true
+drag_margin_left = 0.5
+drag_margin_top = 0.5
+drag_margin_right = 0.5
+drag_margin_bottom = 0.5
+
+[node name="Flame Pivot" type="Position2D" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_gizmo_extents_": 0.0
+}
+
+[node name="Lanturn" type="Sprite" parent="Flame Pivot"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+offset = Vector2( 40, 0 )
+script = ExtResource( 4 )
