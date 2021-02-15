@@ -1,6 +1,5 @@
 extends Actor
-
-const MAX_SPEED = 20000
+const MAX_SPEED = 15000
 var input_vector = Vector2.ZERO
 var Velocity = Vector2.ZERO
 
@@ -15,3 +14,4 @@ func _physics_process(delta: float) -> void:
 		Velocity = Vector2.ZERO
 	
 	move_and_slide(Velocity * delta * MAX_SPEED)
+
